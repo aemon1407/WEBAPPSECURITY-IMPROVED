@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Chart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Organization.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/tiktok?f=brands&s=solid">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="Organization.js"></script>
+    
+</head>
+<body>
+    <!-- header part,top of page-->
+    <header>
+        <div class="logo">
+            <img src="/images/logo pembina.png" alt="Logo">
+        </div>
+        <h1>PEMBINA IIUM</h1>
+  
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="/home/home.html">Home</a></li>
+                    <li><a href="/about/About.html">About</a></li>
+                    <li><a href="/passion/ourpassion.html">Objectives</a></li>
+                    <li><a href="/activity/activity.html">Activities</a></li>
+                    <li><a href="/achievement/achievement.html">Achievements</a></li>
+                    <li><a href="/organization/Organization.html">Organization</a></li>
+                    <li><a href="/registration/Registration.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+<!-- tree structure -->
+<div id="tree">
+    <!-- line one President -->
+    <nav class="line-one">
+        <div id="president" ><button class="button" id="president">PRESIDENT <br> Ismail Mohd Adlan</button></div>
+        <div id="gambar" hidden><img src="/images/Ismail.jpg" alt="Presiden Pembina" width="150px"height="150px"></div>
+    </nav>
+   
+    <br>
+    <!-- line two Chief Operation,Dep Pres -->
+    <!-- all image are hidden first -->
+    <nav class="line-two">
+        <div id="chief" ><button class="button" id="chief">CHIEF OPERATION <br> Ibrahim Nasrum</button></div>
+        <div id="gambar1" hidden><img src="/images/ibrahim.jpg" alt="Chief of Operation Pembina" width="150px"height="150px"></div>
+        <div id="dep-pres" ><button class="button" id="dep-pres">DEPUTY PRESIDENT <br> Nur Aisyah Hamdi</button></div>
+        <div id="gambar2" hidden><img src="/images/aisyah hamdi.jpg" alt="Deputy President Pembina" width="150px"height="150px"></div>
+    </nav>
+    <br>
+    <!-- line three Secretary,Treaserur,Vice President and their vice -->
+    <nav class="line-three">
+        <div id="secretary"><button class="button" id="secretary">SECRETARY <br> Iman Solehin</button></div>
+        <div id="gmbr-secretary" hidden><img src="/images/Iman Sol.jpg" alt="Deputy President Pembina" width="150px"height="150px"></div>
+
+        <div id="vice-secretary"><button class="button" id="vice-secretary">VICE SECRETARY <br> Wan Nur Afifah</button></div>
+        <div id="gmbr-vice-secretary" hidden><img src="/images/wan nur afifah.jpg" alt="Deputy President Pembina" width="150px"height="150px"></div>
+
+        <div id="treasurer"><button class="button" id="treasurer">TREASURER <br> Thalhah Ubaidillah</button></div>
+        <div id="gmbr-treasurer" hidden><img src="/images/thalhah.jpg" alt="Treasurer Pembina" width="150px"height="150px"></div>
+
+        <div id="vice-treasurer"><button class="button" id="vice-treasurer"> VICE TREASURER <br> Izzati Zainal</button></div>
+        <div id="gmbr-vice-treasurer" hidden><img src="/images/izzati zainal.jpg" alt="Vice Treasurer Pembina" width="150px"height="150px"></div>
+
+        <div id="vice-president-1"><button class="button" id="vice-president-1">VICE PRESIDENT 1 <br> Abu Zharr Luqman</button></div>
+        <div id="gmbr-vice-president-1" hidden><img src="/images/abu zharr.jpg" alt="Vice President 1 Pembina" width="150px"height="150px"></div>
+
+        <div id="vice-president-2"><button class="button" id="vice-president-2">VICE PRESIDENT 2 <br>Nor Aynah</button></div>
+        <div id="gmbr-vice-president-2" hidden><img src="/images/Aynah Aripin.jpg" alt="Deputy President Pembina" width="150px"height="150px"></div>
+    </nav>
+    
+
+    <!-- line four List of Bureau in PEMBINA-->
+    <nav class="line-four"> 
+        <div id="Intellectual">
+            <button class="button" id="Intellectual">Bureau Of Intellectual <br> Wafi & Insyirah</button>
+        </div>
+        <div id="gmbr-intellectual" hidden >
+            <img src="/images/gmbr wafi.jpg" alt="Head Intellectual Pembina" width="120px"height="120px">
+            <img src="/images/Insyirah mokrim.jpg" alt=" Second Head Intellectual Pembina" width="120px"height="120px">
+        </div>
+
+        <div id="Islamization">
+            <button class="button" id="Islamization">Bureau Of Islamization <br> Adib & Afifah</button>
+        </div>
+        <div id="gmbr-islamization" hidden >
+            <img src="/images/adib aiman.jpg" alt="Head Islamization Pembina" width="120px"height="120px">
+            <img src="/images/Afifah Thahirah.jpg" alt=" Second Head Islamization Pembina" width="120px"height="120px">
+       </div>
+
+        <div id="Activisme">
+            <button class="button" id="Activisme">Bureau Of Activimsme <br> Aliff & Faizatul</button>
+        </div>
+        <div id="gmbr-activisme" hidden>
+            <img src="/images/alep acap.jpg" alt="Head Activisme Pembina" width="120px"height="120px">
+            <img src="/images/Faizatul Husna.jpg" alt=" Second Head Intellectual Pembina" width="120px"height="120px">
+        </div>
+
+        <div id="Media">
+            <button class="button" id="Media">Bureau Of Multimedia <br> Zikri & Risa</button>
+        </div>
+        <div id="gmbr-multimedia" hidden>
+            <img src="/images/zikri nasoha.jpg" alt="Head Multimedia Pembina" width="120px"height="120px">
+            <img src="/images/Risa Sabrina.jpg" alt=" Second Head Intellectual Pembina" width="120px"height="120px">
+        </div>
+    </nav>
+    
+</div>
+
+
+</main>
+
+
+<footer>follow us on socials:
+    <a href="https://www.facebook.com/pembina.uiam" class="fa fa-facebook"></a>
+    <a href="https://x.com/PEMBINAUIAM?t=StRzLEQRBE4ARnwWPImkGw&s=35" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/pembina.uiam?igsh=MTI5d2p0emE3ejYwMw==" class="fa fa-instagram"></a>
+    <a href="https://www.tiktok.com/@pembina.uiam?_t=8jRTpey8fAu&_r=1" class="fa fa-tumblr"></a>
+</footer>
+</body>
+</html>

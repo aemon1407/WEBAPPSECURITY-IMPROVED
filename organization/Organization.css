@@ -1,0 +1,234 @@
+header {
+    background-color: #81acc5;
+    color: #000;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    
+}
+.logo img {
+  max-width: 70px;
+  height: auto;
+  margin-left: 20px;
+  
+}
+h1 {
+  margin: 10px;
+}
+  
+  .navigation {
+    flex-grow: 1; 
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6px 10px 5px 10px;
+    font-weight: bold;
+    }
+    a:hover {
+    color: white;
+    background-color: blue;
+    }
+    /* body */
+body{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    /* image background of the page */
+    background-image: url('lineup.jpg');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+}
+#tree{
+    background-color: rgb( 255, 255, 255 , 70%);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.button {
+    font-size: 15px;
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif; 
+    background-color: none;
+    border: solid black;
+    border-radius: 12px;
+}
+.line-one{
+    margin: auto;
+    width: 13%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+}
+/* line two */
+/* Every line will be arrange in specific gird template areas and every element will be assign to which grid it 
+should sit to arrange it properly and accordingly */
+.line-two{
+    display: grid;
+    /* border: 3px solid #73AD21; */
+    grid-template-areas: 
+    "sec sec dep dep"
+    "pic pic pic2 pic2"
+    ;
+    margin: auto;
+    width: 27%;
+    padding: 10px;   
+}
+#chief{
+    grid-area: sec;
+}
+#gambar1{
+    grid-area: pic;
+}
+#dep-pres{
+    grid-area: dep;
+}
+#gambar2{
+    grid-area: pic2;
+}
+/* line three */
+/* Every line will be arrange in specific gird template areas and every element will be assign to which grid it 
+should sit to arrange it properly and accordingly */
+.line-three{
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "sec vsec tres vtres vp vp2"
+    "pic1 pic2 pic3 pic4 pic5 pic6";
+    width: 90%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+}
+#secretary{
+    grid-area: sec;
+}
+#gmbr-secretary{
+    grid-area: pic1;
+}
+#vice-secretary{
+    grid-area: vsec;
+}
+#gmbr-vice-secretary{
+    grid-area: pic2;
+}
+#treasurer{
+    grid-area: tres;
+}
+#gmbr-treasurer{
+    grid-area: pic3;
+}
+#vice-treasurer{
+    grid-area: vtres;
+}
+#gmbr-vice-treasurer{
+    grid-area: pic4;
+}
+#vice-president-1{
+    grid-area: vp;
+}
+#gmbr-vice-president-1{
+    grid-area: pic5;
+}
+#gmbr-vice-president-2{
+    grid-area: pic6;
+}
+#vice-president-2{
+    grid-area: vp2;
+}
+/* line four */
+/* Every line will be arrange in specific gird template areas and every element will be assign to which grid it 
+should sit to arrange it properly and accordingly */
+.line-four{
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "intel intel islam islam act act media media"
+    "pic1 pic1 pic2 pic2 pic3 pic3 pic4 pic4";
+    width: 100%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px; 
+}
+#Intellectual{
+    grid-area: intel;
+}
+#gmbr-intellectual{
+    grid-area: pic1;
+}
+#Islamization{
+    grid-area: islam;
+}
+#gmbr-islamization{
+    grid-area: pic2;
+}
+#Activisme{
+    grid-area: act;
+}
+#gmbr-activisme{
+    grid-area: pic3;
+}
+#Media{
+    grid-area: media;
+}
+#gmbr-multimedia{
+    grid-area: pic4;
+}
+
+/*footer*/
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 5px auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      color: red;
+      background-color: yellow;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-tumblr {
+background: #2c4762;
+color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  footer{
+    background-color: rgb( 255, 255, 255 );
+    margin-bottom: 0;
+}
