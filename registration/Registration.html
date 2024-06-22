@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Registration.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/tiktok?f=brands&s=solid">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="Registration.js" defer></script>
+</head>
+<body>
+   <!-- header part,top of page-->
+   <header>
+    <div class="logo">
+        <img src="/images/logo pembina.png" alt="Logo">
+    </div>
+    <h1>PEMBINA IIUM</h1>
+
+    <div class="navigation">
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="/home/home.html">Home</a></li>
+                    <li><a href="/about/About.html">About</a></li>
+                    <li><a href="/passion/ourpassion.html">Objectives</a></li>
+                    <li><a href="/activity/activity.html">Activities</a></li>
+                    <li><a href="/achievement/achievement.html">Achievements</a></li>
+                    <li><a href="/organization/Organization.html">Organization</a></li>
+                    <li><a href="/registration/Registration.html">Register</a></li>
+                </ul>
+        </nav>
+    </div>
+</header>
+<!--register as a new member  -->
+<div class="container">
+    <div class="item" id="register">
+    <form id="form" action="/" >
+        <h1>Register as New Member</h1>
+        <div class="input-control">
+            <label for="username">Name</label>  <!--input for name  -->
+            <input id="username" name="username" type="text">
+            <div class="error"></div>   <!--display the message if user put error input  -->
+        </div>
+        <div class="input-control">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text"> <!--input for email  -->
+            <div class="error"></div> <!--display the message if user put error input  -->
+        </div>
+        <div class="input-control">
+            <label for="matricno">Matric No</label>
+            <input id="matricno" name="matricno" type="number"> <!--input for matricno  -->
+            <div class="error"></div> <!--display the message if user put error input  -->
+        </div>
+        <div class="input-control">
+            <label for="password">Password</label>
+            <input id="password"name="password" type="password">   <!--input for password  -->
+            <div class="error"></div> <!--display the message if user put error input  -->
+        </div>
+        <div class="input-control">
+            <label for="password2">Password again</label>
+            <input id="password2"name="password2" type="password"> <!--input for retype password  -->
+            <div class="error"></div> <!--display the message if user put error input  -->
+        </div>
+         <div class="input-control"> 
+            <label for="interested">Do you interested to be comitte</label>
+            <label for="yes">Yes</label><input id="yes" name="interest" type="radio" value="yes"> <!--radio button whether user interested to be comitte  -->
+            <label for="no">No</label><input id="no" name="interest" type="radio" value="no">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="interested">If yes choose your bureau</label>       <!--user need to choose bureau if they choose to be comitee  -->
+            <select name="berueau" id="beruea">
+                <option value="no-beruea" name="no-beruea">[choose your bureau]</option>
+                <option value="intellectual" name="Intellectual">Intellectual</option>
+                <option value="islamization" name="Islamization">Islamization</option>
+                <option value="activisme" name="Activisme">Activisme</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <button type="submit" id="submit">Submit</button> <!--submit button  -->
+        <div class="ID Member"></div>
+    </form>
+</div>
+
+<!-- Search your member -->
+ <div class="item" id="checkmember"> 
+    <form id="form1" action="/"><h1>Check your Member's</h1>
+        <input type="search" name="searching" id="searching"> <!--input for user to search -->
+        <div id="low">**search in lowercase</div> <!--requirement for user to search -->
+        <button type="submit" id="search">Search</button> <!--search button  -->
+        <br><br>
+        <table id="memberlist"> <!--table to display the result of search  -->
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Matric No</th>
+            <th>Bureau</th>
+          </tr>
+        
+        </table></form>
+    
+</div>
+</div>
+
+
+
+<footer>follow us on socials: 
+    <a href="https://www.facebook.com/pembina.uiam" class="fa fa-facebook"></a>
+    <a href="https://x.com/PEMBINAUIAM?t=StRzLEQRBE4ARnwWPImkGw&s=35" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/pembina.uiam?igsh=MTI5d2p0emE3ejYwMw==" class="fa fa-instagram"></a>
+    <a href="https://www.tiktok.com/@pembina.uiam?_t=8jRTpey8fAu&_r=1" class="fa fa-tumblr"></a>
+</footer>
+</body>
+</html>
