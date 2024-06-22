@@ -1,0 +1,130 @@
+/* header */
+  header {
+    background-color: #81acc5;
+    color: #000;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+}
+.logo img {
+  max-width: 70px;
+  height: auto;
+  margin-left: 20px;
+  
+}
+h1 {
+  margin: 10px;
+}
+  
+  .navigation {
+    flex-grow: 1; 
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6px 10px 5px 10px;
+    font-weight: bold;
+    }
+    a:hover {
+    color: white;
+    background-color: blue;
+    }
+/* body */
+body{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-image: url('/images/gmbr ramai2.JPG');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+}
+
+.container{ 
+  /* the content of the about page is arrange in flex row direction */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb( 255, 255, 255 , 70%);
+    padding: 20px auto; margin-top: 20px;
+    }
+h2{
+    /* border: 3px solid green; */
+    width: 100%;
+    /* allign text about to center */
+    text-align: center; 
+    font-size: 30px;
+}
+#background h1,p{
+    margin: 10px auto;
+    /* allign background header and its content to the center */
+    padding: 20px;
+    text-align: center;
+}
+#introduction h1,p{
+    margin: 10px auto;
+    /* allign introduction header and its content to the center */
+    padding: 20px;
+    text-align: center;
+}
+/*footer*/
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 5px auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      color: red;
+      background-color: yellow;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-tumblr {
+background: #2c4762;
+color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  footer{
+    background-color: #f2f2f2;
+}
