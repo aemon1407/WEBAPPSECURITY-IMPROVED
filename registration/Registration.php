@@ -4,7 +4,7 @@
 $host = 'localhost'; // Database host
 $dbname = 'pembina'; // Database name
 $username = 'root'; // Database username
-$password = ''; // Database password
+$password = 'de462f49531c57e381374b88a91942f7789a7a65f9f156b4'; // Database password
 
 try {
     $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
