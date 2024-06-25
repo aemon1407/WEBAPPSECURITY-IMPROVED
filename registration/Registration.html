@@ -27,7 +27,7 @@
                     <li><a href="/achievement/">Achievements</a></li>
                     <li><a href="/organization/">Organization</a></li>
                     <li><a href="/registration/">Register</a></li>
-                    <li><a href="/login/">Login</a></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -53,7 +53,7 @@
                     <input id="matricno" name="matricno" type="number" required>
                     <div class="error"></div>
                 </div>
-                <div class="input-control">
+                <!-- <div class="input-control">
                     <label for="password">Password</label>
                     <input id="password" name="password" type="password" required>
                     <div class="error"></div>
@@ -62,7 +62,7 @@
                     <label for="password2">Password again</label>
                     <input id="password2" name="password2" type="password" required>
                     <div class="error"></div>
-                </div>
+                </div> -->
                 <div class="input-control">
                     <label>Do you want to be a committee?</label>
                     <label for="yes">Yes</label>
@@ -74,10 +74,11 @@
                 <div class="input-control">
                     <label for="bureau">If yes, choose your bureau</label>
                     <select name="bureau" id="bureau" required>
-                        <option value="">[Choose your bureau]</option>
+                        <option value="" disabled>[Choose your bureau]</option>
                         <option value="intellectual">Intellectual</option>
                         <option value="islamization">Islamization</option>
                         <option value="activisme">Activism</option>
+                        <option value="multimedia">Multimedia</option>
                     </select>
                     <div class="error"></div>
                 </div>
@@ -90,7 +91,7 @@
         <div class="item" id="checkmember">
             <form id="form1" action="/" method="get">
                 <h1>Check your Member's</h1>
-                <input type="search" name="searching" id="searching" required>
+                <input type="search" placeholder="Search for any names (e.g.: safwan)" name="searching" id="searching" required>
                 <div id="low">**search in lowercase</div>
                 <button type="submit" id="search">Search</button>
                 <br><br>

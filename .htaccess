@@ -6,7 +6,7 @@
     RewriteEngine On
 
     # Redirect /home/ to /home/home.html
-    RewriteRule ^home/?$ /home/home.html [L]
+    RewriteRule ^home/?$ /home/home.php [L]
 
     RewriteRule ^registration/?$ /registration/Registration.html [L]
     RewriteRule ^passion/?$ /passion/ourpassion.html [L]
@@ -15,5 +15,7 @@
     RewriteRule ^activity/?$ /activity/activity.html [L]
     RewriteRule ^achievement/?$ /achievement/achievement.html [L]
     RewriteRule ^about/?$ /about/About.html [L]
+
+    RewriteRule ^admin/?$ /admin/login.php [L]
     
 </IfModule>

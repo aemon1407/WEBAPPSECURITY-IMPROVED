@@ -33,25 +33,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
     $emailCount = $stmt->fetchColumn();
 
     if ($emailCount > 0) {
-        echo json_encode(array('error' => 'Email already used'));
-        exit;
+        echo json_encode(array('message' => 'Email already used'));
+        exit();
+    }
+
+    $matCheckSQL = "SELECT COUNT(*) FROM members WHERE matricno = :matricno";
+    $stmt = $db->prepare($matCheckSQL);
+    $stmt->bindParam(':matricno', $matricno);
+    $stmt->execute();
+    $matCount = $stmt->fetchColumn();
+
+    if ($matCount > 0) {
+        echo json_encode(array('message' => 'Matric number already registered'));
+        exit();
     }
 
     // Insert into database
     try {
-        $sql = "INSERT INTO members (name, email, matricno, password, bureau) 
-                VALUES (:name, :email, :matricno, :password, :bureau)";
+        $sql = "INSERT INTO members (name, email, matricno, bureau) 
+                VALUES (:name, :email, :matricno, :bureau)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':matricno', $matricno);
-        $stmt->bindParam(':password', $password);
         $stmt->bindParam(':bureau', $bureau);
         $stmt->execute();
 
-        echo json_encode(array('message' => 'Member data stored successfully'));
+        echo json_encode(array('message' => 'Member data stored successfully! Congratulations! You are now a member of PEMBINA!'));
     } catch (PDOException $e) {
-        echo json_encode(array('error' => 'Failed to store member data: ' . $e->getMessage()));
+        echo json_encode(array('message' => 'Failed to store member data: ' . $e->getMessage()));
     }
 }
 
@@ -70,10 +80,10 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET
 
             echo json_encode($results);
         } catch (PDOException $e) {
-            echo json_encode(array('error' => 'Failed to fetch members: ' . $e->getMessage()));
+            echo json_encode(array('message' => 'Failed to fetch members: ' . $e->getMessage()));
         }
     } else {
-        echo json_encode(array('error' => 'Search parameter not provided'));
+        echo json_encode(array('message' => 'Search parameter not provided'));
     }
 }
 
@@ -91,10 +101,10 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET
 
             echo json_encode(array('isUnique' => $emailCount == 0));
         } catch (PDOException $e) {
-            echo json_encode(array('error' => 'Failed to check email: ' . $e->getMessage()));
+            echo json_encode(array('message' => 'Failed to check email: ' . $e->getMessage()));
         }
     } else {
-        echo json_encode(array('error' => 'Email parameter not provided'));
+        echo json_encode(array('message' => 'Email parameter not provided'));
     }
 }
 

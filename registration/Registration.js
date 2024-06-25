@@ -7,7 +7,7 @@ form.addEventListener('submit', async e => {
             name: document.getElementById('username').value,
             email: document.getElementById('email').value,
             matricno: document.getElementById('matricno').value,
-            password: document.getElementById('password').value,
+            // password: document.getElementById('password').value,
             bureau: document.getElementById('bureau').value 
         };
 
@@ -22,7 +22,7 @@ form.addEventListener('submit', async e => {
 
             const data = await response.json();
             if (response.ok) {
-                alert('Congrats, you are now a PEMBINA member');
+                alert(data.message);
                 document.getElementById('form').reset();
             } else {
                 alert('Failed to register member');
@@ -38,13 +38,13 @@ async function validateInputs() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const matricno = document.getElementById('matricno').value;
-    const password = document.getElementById('password').value;
-    const password2 = document.getElementById('password2').value;
+    // const password = document.getElementById('password').value;
+    // const password2 = document.getElementById('password2').value;
 
     const usernameRegex = /^[a-zA-Z\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const matricnoRegex = /^\d+$/;
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!usernameRegex.test(username)) {
         alert('Name must contain only letters and spaces.');
@@ -63,16 +63,6 @@ async function validateInputs() {
 
     if (!matricnoRegex.test(matricno)) {
         alert('Matric number must contain only numbers.');
-        return false;
-    }
-
-    if (!passwordRegex.test(password)) {
-        alert('Password must be at least 8 characters long and include at least one uppercase letter, one number, and one special character.');
-        return false;
-    }
-
-    if (password !== password2) {
-        alert('Passwords do not match.');
         return false;
     }
 

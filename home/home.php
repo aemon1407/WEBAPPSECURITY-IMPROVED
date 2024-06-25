@@ -29,13 +29,22 @@
                 <li><a href="/achievement/">Achievements</a></li>
                 <li><a href="/organization/">Organization</a></li>
                 <li><a href="/registration/">Register</a></li>
-                <li><a href="/login/">Login</a></li>
+                
             </ul>
             </nav>
         </div>
     </header>
 
     <main>
+    <?php
+      if (isset($_GET['msg'])) {
+          echo '<div class="banner error" role="alert">';
+          echo '<p class="banner-title">Pembina Alert</p>';
+          echo '<p>' . $_GET['msg'] . '</p>';
+          echo '</div>';
+      }
+      ?>
+
         <!-- Define the slideshow container -->
     <div id="slideshow">
         <div class="slide-wrapper">
@@ -105,7 +114,7 @@
         <a href="https://x.com/PEMBINAUIAM?t=StRzLEQRBE4ARnwWPImkGw&s=35" class="fa fa-twitter"></a>
         <a href="https://www.instagram.com/pembina.uiam?igsh=MTI5d2p0emE3ejYwMw==" class="fa fa-instagram"></a>
         <a href="https://www.tiktok.com/@pembina.uiam?_t=8jRTpey8fAu&_r=1" class="fa fa-tumblr"></a>
-        <a href="/admin/adminlog.html" class="admin-link hidden">A</a>
+        <a href="/admin/login.php" class="admin-link hidden">A</a>
       </div>
       
   </footer>

@@ -1,3 +1,54 @@
+<?php
+session_start();
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: dashboard.php");
+    exit;
+}
+
+$servername = "localhost";
+$username = "root";
+$password = "de462f49531c57e381374b88a91942f7789a7a65f9f156b4";
+$dbname = "pembina";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $inputUsername = $_POST['username'];
+    $inputPassword = $_POST['password'];
+
+    $sql = "SELECT * FROM admins WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $inputUsername);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($inputPassword, $row['password'])) {
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $inputUsername;
+            $_SESSION['csrf-token'] = md5(uniqid(mt_rand(), true));
+            header("Location: /admin/dashboard.php");
+        } else {
+            echo "Invalid username or password";
+        }
+    } else {
+        echo "Invalid username or password";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +85,7 @@
 </header>
 
 <main>
-    <form id="loginForm" class="login" method="POST" action="adminlog.php">
+    <form id="loginForm" class="login" method="POST">
         <h2>Welcome, Admin!</h2>
         <p>Please log in</p>
         <input type="text" id="username" name="username" placeholder="User Name" required />
