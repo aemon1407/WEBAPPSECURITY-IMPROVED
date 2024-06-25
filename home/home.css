@@ -73,6 +73,14 @@ a{
   font-weight: bold;
   }
 
+.admin-link {
+  background-color: #f2f2f2;
+}
+
+.admin-link:hover {
+  background-color: #f2f2f2;
+}
+
 a:hover {
   color: white;
   background-color: blue;
