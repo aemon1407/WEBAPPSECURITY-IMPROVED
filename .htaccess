@@ -3,8 +3,19 @@
 </IfModule>
 
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+    RewriteEngine On
+
+    # Redirect /home/ to /home/home.html
+    RewriteRule ^home/?$ /home/home.php [L]
+
+    RewriteRule ^registration/?$ /registration/Registration.html [L]
+    RewriteRule ^passion/?$ /passion/ourpassion.html [L]
+
+    RewriteRule ^organization/?$ /organization/Organization.html [L]
+    RewriteRule ^activity/?$ /activity/activity.html [L]
+    RewriteRule ^achievement/?$ /achievement/achievement.html [L]
+    RewriteRule ^about/?$ /about/About.html [L]
+
+    RewriteRule ^admin/?$ /admin/login.php [L]
+    
 </IfModule>

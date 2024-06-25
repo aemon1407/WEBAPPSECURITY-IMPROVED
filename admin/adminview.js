@@ -32,40 +32,48 @@ $(document).ready(function() {
         }
     });
 
-    // Load members from database
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    // // Load members from database
     function loadMembers() {
-        $.get('crud.php', function(data) {
-            const members = JSON.parse(data);
+        $.get('dashboard.php?action=get_members', function(data) {
+
+            const members = data;
+
             let rows = '';
-            members.forEach(member => {
+            members.forEach((member, index) => {
                 rows += `<tr>
-                    <td><input type="checkbox" class="select-member" data-id="${member.id}"></td>
-                    <td>${member.id}</td>
+                    <td><input id="${member.id}" class="select-member" type="checkbox" value="${member.id}"></td>
+                    <td>${index + 1}</td>
                     <td>${member.name}</td>
                     <td>${member.matricno}</td>
                     <td>${member.email}</td>
-                    <td>${member.bureau}</td>
+                    <td>${capitalizeFirstLetter(member.bureau)}</td>
                 </tr>`;
             });
             $('tbody').html(rows);
         });
     }
 
-    loadMembers();
+    // loadMembers();
 
     // Handle add form submission
     $('#addForm').submit(function(event) {
         event.preventDefault();
-        $.post('crud.php', {
+        $.post('dashboard.php', {
             action: 'create',
             name: $('#addName').val(),
             matricno: $('#addMatricNo').val(),
             email: $('#addEmail').val(),
-            bureau: $('#addBureau').val()
-        }, function() {
-            loadMembers();
+            bureau: $('#addBureau').val(),
+            csrf: $('#csrf').val()
+        }, function(data) {
             addModal.hide();
-        });
+            loadMembers(data.message);
+            renderBanner(data.message, data.status);
+        })
     });
 
     // Open edit modal and fill in the form
@@ -75,9 +83,8 @@ $(document).ready(function() {
             alert('Please select any member to edit.');
             return;
         }
-        const id = selected.data('id');
-        $.get('crud.php', function(data) {
-            const members = JSON.parse(data);
+        const id = selected.val();
+        $.get('dashboard.php?action=get_members', function(members) {
             const member = members.find(m => m.id == id);
             $('#editId').val(member.id);
             $('#editName').val(member.name);
@@ -88,19 +95,45 @@ $(document).ready(function() {
         });
     });
 
+    function renderBanner(message, status = 'success') {
+
+        console.log(status)
+
+        $('.banner > #banner-description').text(message);
+
+        if (status === 'success') {
+
+            if ($('.banner').hasClass('error')) {
+                $('.banner').removeClass('error');
+            }
+
+            $('.banner').addClass('success').show();
+        }
+        else if (status === 'error') {
+            if ($('.banner').hasClass('success')) {
+                $('.banner').removeClass('success');
+            }
+
+            $('.banner > .banner-title').text('Error');
+            $('.banner').addClass('error').show();
+        }
+    }
+
     // Handle edit form submission
     $('#editForm').submit(function(event) {
         event.preventDefault();
-        $.post('crud.php', {
+        $.post('dashboard.php', {
             action: 'update',
             id: $('#editId').val(),
             name: $('#editName').val(),
             matricno: $('#editMatricNo').val(),
             email: $('#editEmail').val(),
-            bureau: $('#editBureau').val()
-        }, function() {
-            loadMembers();
+            bureau: $('#editBureau').val(),
+            csrf: $('#csrf').val()
+        },function(data) {
             editModal.hide();
+            loadMembers();
+            renderBanner(data.message, data.status);
         });
     });
 
@@ -111,9 +144,10 @@ $(document).ready(function() {
             alert('Please select at least one member to delete.');
             return;
         }
-        const ids = selected.map(function() { return $(this).data('id'); }).get();
-        $.post('crud.php', { action: 'delete', id: ids }, function() {
+        const ids = selected.map(function() { return $(this).val(); }).get();
+        $.post('dashboard.php', { action: 'delete', id: ids }, function(data) {
             loadMembers();
+            renderBanner(data.message, data.status);
         });
     });
 
@@ -138,7 +172,7 @@ $(document).ready(function() {
 
     // Check session status
     function checkSession() {
-        $.get('crud.php?action=check_session', function(data) {
+        $.get('dashboard.php?action=check_session', function(data) {
             const status = JSON.parse(data).status;
             if (status === 'logged_out') {
                 logout();
