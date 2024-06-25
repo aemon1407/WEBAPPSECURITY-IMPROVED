@@ -1,0 +1,220 @@
+/*fade up animation when everytime page reloads*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "sans-serif";
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+header {
+    background-color: #6b9fcc;
+    color: #000;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+    max-width: 70px;
+    height: auto;
+    margin-left: 20px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.navigation {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6px 10px 5px 10px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    background-color: blue;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.update-btn {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 5px 5px;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    background-color: #1877f2;
+}
+
+.fa-twitter {
+    background-color: #1da1f2;
+}
+
+.fa-instagram {
+    background-color: #e4405f;
+}
+
+.fa-tumblr {
+    background-color: #2c4762;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
