@@ -24,7 +24,25 @@ PEMBINA IIUM
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
 - Using Regex, to ensure that only allowed characters can be entered as input.
-  Snippets from Registration.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/65de6b4f1816f9f8698833d5e574951d4b009ab9/registration/Registration.js#L37-L57
+  Snippets from Registration.php :
+  async function validateInputs() {
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const matricno = document.getElementById('matricno').value;
+    const password = document.getElementById('password').value;
+    const password2 = document.getElementById('password2').value;
+
+
+    const usernameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const matricnoRegex = /^\d+$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+
+    if (!usernameRegex.test(username)) {
+        alert('Name must contain only letters and spaces.');
+        return false;
+    }
 - 
 ### 2. Authentication
 ### 3. Authorization
