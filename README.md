@@ -48,7 +48,8 @@ Implemented input validation to prevent unwanted characters or format for every 
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
 - Using prepared statement and parameter binding to ensure the user input treated as data. <br>
-  Snippet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
+  Snippet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb) <br>
+  Snippet from login.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/aa396974-444e-488a-8cbc-682099dea548)
 <a id="fileSecurity"></a>
 ### 7. File Security Principles
 Create a .htaccess file to protect from unathourize file access.
