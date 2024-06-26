@@ -5,7 +5,7 @@
 |----------------------------|---------|---------
 |Aiman Fathi Bin Mohd Fairuz |2121549  | Regex application, input validation, authentication of admin login, application of session and timeout, authorization for admin access, password hashing
 |Safwan bin Roslin           |2113779  | XSS Prevention and CSRF Prevention
-|Muhammad Haniff bin Ismail  |2110619  |
+|Muhammad Haniff bin Ismail  |2110619  | Database Security Principles and File Security Principles
 
 ## Table of Content
 1. [Input Validation](#inputValidation)
