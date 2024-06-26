@@ -43,6 +43,8 @@ Implemented input validation to prevent unwanted characters or format for every 
 Implement authentication for admin login to ensure safety when accessing user data.
 - Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing. <br>
   https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/c3a0d9ffdfc10dc7b34c8d9b8e06ea2daa02971e/admin/7355608.php#L16-L25 <br>
+  ![Desktop Screenshot 2024 06 26 - 13 07 23 36](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/128023708/fb268b6b-5f91-4e6f-b993-1cf4bbefbce4)
+
 
 <a id="authorization"></a>
 ### 3. Authorization
@@ -89,19 +91,27 @@ Create a .htaccess file to protect from unathourize file access.
 - Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
   Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
 
+- Admin Login Implementation: We make sure the login page for admin is not easily noticable by other party by placing it in place where people rarely look at.
+![Desktop Screenshot 2024 06 26 - 13 07 12 66](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/128023708/81c741b6-f5cd-445f-aaf4-787b19a775ba)
+
+
+
 ## REFERENCES
 
 1. OWASP Top Ten: Guidance on the top ten critical web application security risks and how to mitigate them effectively.
-
+   https://owasp.org/www-project-top-ten/<br>
+   
 2. PHP Security Guide: Best practices and guidelines for securing PHP applications, covering authentication, input validation, and more.
+   https://www.php.net/manual/en/security.php<br>
+   
+4. XAMPP Documentation: Documentation on configuring and securing XAMPP, ensuring a secure local development environment.
+   https://www.apachefriends.org/docs/ <br>
+   
+5. DigitalOcean Documentation: Documentation for live server hosting. Deployed on DigitalOcean cloud platform using their droplet product. We have used the LAMP (Linux, Apache, MySQL, PHP) stack on Ubuntu 22.04
+https://docs.digitalocean.com/ <br>
 
-3. XAMPP Documentation: Documentation on configuring and securing XAMPP, ensuring a secure local development environment.
-
-4. DigitalOcean Documentation: Documentation for live server hosting. Deployed on DigitalOcean cloud platform using their droplet product. We have used the LAMP (Linux, Apache, MySQL, PHP) stack on Ubuntu 22.04
-https://docs.digitalocean.com/
-
-5. Adminer Documentation: Comprehensive documentation on securing Adminer databases, covering user management, access controls, and secure connections.
-https://www.adminer.org/
+6. Adminer Documentation: Comprehensive documentation on securing Adminer databases, covering user management, access controls, and secure connections.
+https://www.adminer.org/ <br>
 
 ## APPENDICES
 
