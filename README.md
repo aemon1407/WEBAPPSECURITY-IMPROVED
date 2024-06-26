@@ -33,10 +33,10 @@ The objective of this website enhancement is to significantly improve its securi
 <a id="inputValidation"></a>
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
-- Using Regex, to ensure that only allowed characters can be entered as input.
+- Using Regex, to ensure that only allowed characters can be entered as input. <br>
   Snippets from Registration.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52
-- Ensure email uniqueness, where used email cannot be registered anymore.
-  Snippets from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L82-L91
+- Ensure email uniqueness, where used email cannot be registered anymore. <br>
+  Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L82-L91
 <a id="authentication"></a>
 ### 2. Authentication
 <a id="authorization"></a>
@@ -47,14 +47,14 @@ Implemented input validation to prevent unwanted characters or format for every 
 ### 5. CSRF Prevention
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
-- Using prepared statement and parameter binding to ensure the user input treated as data.
-  Sinppet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
+- Using prepared statement and parameter binding to ensure the user input treated as data. <br>
+  Snippet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
 <a id="fileSecurity"></a>
 ### 7. File Security Principles
 Create a .htaccess file to protect from unathourize file access.
-- Disabling file directory.
+- Disabling file directory. <br>
   Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/840659f9-c512-4bef-bcae-119f6ed86987)
-- Disabling .html extension from URL
+- Disabling .html extension from URL <br>
   Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a3c5ddd9-fdbd-46cd-9796-f3f266d2bef7)
 <a id="addSecurity"></a>
 ### 8. Additional Security Measure
