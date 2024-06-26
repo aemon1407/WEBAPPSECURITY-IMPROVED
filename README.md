@@ -47,6 +47,16 @@ Implemented input validation to prevent unwanted characters or format for every 
 <a id="XSS"></a>
 ### 4. XSS Prevention
 <a id="CSRFprevention"></a>
+- This code snippet demonstrates how to protect a web application from Cross-Site Scripting (XSS) attacks by sanitizing user input. XSS attacks occur when an attacker is able to inject malicious scripts into web pages viewed by other users. To prevent this, the code uses the htmlspecialchars function to convert special characters to their HTML entities, thus preventing the execution of any embedded scripts. <br><br>
+- Snippet from dashboard.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/fc7f60415b65f40fb5b9dfa5e4ac57190d18330b/admin/dashboard.php#L126-L129 <br>
+  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/fc7f60415b65f40fb5b9dfa5e4ac57190d18330b/admin/dashboard.php#L156-L160 <br>
+- `htmlspecialchars()`: This function converts special characters to HTML entities. For example: <br>
+  `&` becomes `&amp;` <br>
+  `<` becomes `&lt;` <br>
+  `>` becomes `&gt;` <br>
+  `"` becomes `&quot;` <br>
+  `'` becomes `&#039;` <br> <br>
+- By using htmlspecialchars, the script ensures that any HTML or JavaScript code submitted through the form will be displayed as plain text, rather than being executed by the browser. This prevents malicious scripts from running and potentially compromising the security of the website or its users. <br>
 ### 5. CSRF Prevention
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
