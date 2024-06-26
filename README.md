@@ -48,14 +48,14 @@ Implemented input validation to prevent unwanted characters or format for every 
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
 - Using prepared statement and parameter binding to ensure the user input treated as data. <br>
-  Snippet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb) <br>
-  Snippet from login.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/aa396974-444e-488a-8cbc-682099dea548)
+  Snippet from Registration.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/registration/Registration.php#L50-L61 <br>
+  Snippet from login.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/admin/login.php#L25-L31
 <a id="fileSecurity"></a>
 ### 7. File Security Principles
 Create a .htaccess file to protect from unathourize file access.
 - Disabling file directory. <br>
-  Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/840659f9-c512-4bef-bcae-119f6ed86987)
+  Snippet from .htaccess file https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/.htaccess#L1-L3
 - Disabling .html extension from URL <br>
-  Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a3c5ddd9-fdbd-46cd-9796-f3f266d2bef7)
+  Snippet from .htaccess file https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/.htaccess#L5-L21
 <a id="addSecurity"></a>
 ### 8. Additional Security Measure
