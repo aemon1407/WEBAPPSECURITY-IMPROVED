@@ -25,6 +25,8 @@ PEMBINA IIUM
 
 ## Introduction
 
+PEMBINA IIUM is a landing page website for IIUM PEMBINA Club where it contains information about the club including organisation chart, the objectives, registration section for IIUM Student to become member and also login for admin to do CRUD activities for the registered member data.
+
 ## Objective of the Enchancements
 The objective of this website enhancement is to significantly improve its security by implementing comprehensive measures. Input validation for ensuring proper data enters the system, authentication and authorization for verifying user identities and controlling access, XSS prevention for mitigating script injection attacks, CSRF prevention for protecting against unauthorized actions, database security principles for safeguarding data integrity, file security principles for ensuring secure file handling, and additional security measurements to address potential vulnerabilities and enhance overall protection. These enhancements will create a secure, reliable, and efficient platform for all users.
 
