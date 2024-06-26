@@ -88,6 +88,10 @@ Create a .htaccess file to protect from unathourize file access.
 <a id="addSecurity"></a>
 ### 8. Additional Security Measure
 
+- Implementing HTTPS (HTTP Secure) protocol involves using SSL certificate to secure the communication between a client and a server.
+- ![Screenshot 2024-06-26 132130](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/106056077/626c537a-19ee-4568-9d96-d60ffa12aba8)
+
+
 - Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
   Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
 
