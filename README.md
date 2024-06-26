@@ -89,3 +89,24 @@ Create a .htaccess file to protect from unathourize file access.
 - Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
   Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
 
+## REFERENCES
+
+1. OWASP Top Ten: Guidance on the top ten critical web application security risks and how to mitigate them effectively.
+
+2. PHP Security Guide: Best practices and guidelines for securing PHP applications, covering authentication, input validation, and more.
+
+3. XAMPP Documentation: Documentation on configuring and securing XAMPP, ensuring a secure local development environment.
+
+4. DigitalOcean Documentation: Documentation for live server hosting. Deployed on DigitalOcean cloud platform using their droplet product. We have used the LAMP (Linux, Apache, MySQL, PHP) stack on Ubuntu 22.04
+https://docs.digitalocean.com/
+
+5. Adminer Documentation: Comprehensive documentation on securing Adminer databases, covering user management, access controls, and secure connections.
+https://www.adminer.org/
+
+## APPENDICES
+
+- Link for live website:
+  https://pembina.ikool.dev <br>
+  
+- Link for Weekly Progress Report:
+  
