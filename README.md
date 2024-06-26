@@ -9,8 +9,14 @@
 |Muhammad Haniff bin Ismail  |2110619  |
 
 ## Table of Content
-[1]: InputValidation
-
+1. [Input Validation](#inputValidation)
+2. [Authentication](#authentication)
+3. [Authorization](#authorization)
+4. [CSS](#CSS)
+5. [CSRF Prevention](#CSRFprevention)
+6. [Database Security Principles](#databaseSecurity)
+7. [File Security Princliples](#fileSecurity)
+8. [Additional Security Measurements](#addSecurity)
 
 ## Brief Description
 Web application development is not just about applying business logic and automation of a business flow. It is more on providing a secure service to its users and ensure its availability when it is needed. In any web application development, the most common concerns are input validation, authentication, authorization, XSS and CSRF prevention, and enforcing database and file securities. Thus, for web application security group project we are required to enhance our previous web application development from Web Technologies (INFO 2302) and apply all the security elements or components that we have learned in class to ensure the previous developed web application is hardened with the required security elements or components. 
@@ -23,26 +29,31 @@ PEMBINA IIUM
 ## Objective of the Enchancements
 
 ## Web Application Security Enhancements
-### 1. Input Validation [1]
+<a id="inputValidation"></a>
+### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
 - Using Regex, to ensure that only allowed characters can be entered as input.
   Snippets from Registration.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52
 - Ensure email uniqueness, where used email cannot be registered anymore.
   Snippets from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L82-L91
+<a id="authentication"></a>
 ### 2. Authentication
+<a id="authorization"></a>
 ### 3. Authorization
+<a id="CSS"></a>
 ### 4. CSS
+<a id="CSRFprevention"></a>
 ### 5. CSRF Prevention
+<a id="databaseSecurity"></a>
 ### 6. Database Security Principles
 - Using prepared statement and parameter binding to ensure the user input treated as data.
   Sinppet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
+<a id="fileSecurity"></a>
 ### 7. File Security Principles
 Create a .htaccess file to protect from unathourize file access.
 - Disabling file directory.
   Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/840659f9-c512-4bef-bcae-119f6ed86987)
 - Disabling .html extension from URL
   Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a3c5ddd9-fdbd-46cd-9796-f3f266d2bef7)
-
-
-
+<a id="addSecurity"></a>
 ### 8. Additional Security Measure
