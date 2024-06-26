@@ -30,9 +30,15 @@ Implemented input validation to prevent unwanted characters or format for every 
 ### 4. CSS
 ### 5. CSRF Prevention
 ### 6. Database Security Principles
-- Using prepared statement and parameter binding to ensure the user input treated as data
-![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
+- Using prepared statement and parameter binding to ensure the user input treated as data.
+  Sinppet from Registration.php ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a262b4bf-c93d-488f-8c12-0a1ff6b0ebfb)
 ### 7. File Security Principles
-- Create a .htaccess file to disable file directory
+Create a .htaccess file to protect from unathourize file access.
+- Disabling file directory.
+  Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/840659f9-c512-4bef-bcae-119f6ed86987)
+- Disabling .html extension from URL
+  Snippet from .htaccess file ![image](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/92300838/a3c5ddd9-fdbd-46cd-9796-f3f266d2bef7)
+
+
 
 ### 8. Additional Security Measure
