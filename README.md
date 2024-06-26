@@ -72,9 +72,9 @@ Allow certain feature to be access by particular personnel only.
 
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
-- Using prepared statement and parameter binding to ensure the user input treated as data. <br>
-  Snippet from Registration.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/registration/Registration.php#L50-L61 <br>
-  Snippet from login.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/admin/login.php#L25-L31
+- The use of prepared statements and parameter binding helps prevent SQL injection attacks, which are a common security vulnerability in web applications. <br>
+- Snippet from Registration.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/registration/Registration.php#L50-L61 <br>
+- Snippet from login.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/admin/login.php#L25-L31
 
 <a id="fileSecurity"></a>
 ### 7. File Security Principles
