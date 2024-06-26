@@ -33,7 +33,7 @@ The objective of this website enhancement is to significantly improve its securi
 <a id="inputValidation"></a>
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
-- Using Regex to ensure that only allowed characters can be entered as input. <br>
+- Using Regular Expression to ensure that only allowed characters can be entered as input. <br>
   Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52 <br>
 
 - Ensure that email & matric number can only be registered once by user.
@@ -43,7 +43,7 @@ Implemented input validation to prevent unwanted characters or format for every 
 ### 2. Authentication
 Implement authentication for admin login to ensure safety when accessing user data.
 - Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing. <br>
-  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/c3a0d9ffdfc10dc7b34c8d9b8e06ea2daa02971e/admin/7355608.php#L20C4-L20C60 <br>
+  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/c3a0d9ffdfc10dc7b34c8d9b8e06ea2daa02971e/admin/7355608.php#L16-L25 <br>
 
 <a id="authorization"></a>
 ### 3. Authorization
