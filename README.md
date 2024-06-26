@@ -41,6 +41,8 @@ Implemented input validation to prevent unwanted characters or format for every 
 <a id="authentication"></a>
 ### 2. Authentication
 Implement authentication for admin login to ensure safety when accessing user data.
+- Verify admin password login. Snippets from login.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/64a6cd1fe0c0d799a175a6982c9632e788eff7ed/admin/login.php#L22-L44 <br>
+
 - Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing. <br>
   https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/c3a0d9ffdfc10dc7b34c8d9b8e06ea2daa02971e/admin/7355608.php#L16-L25 <br>
   ![Desktop Screenshot 2024 06 26 - 13 07 23 36](https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/assets/128023708/fb268b6b-5f91-4e6f-b993-1cf4bbefbce4)
