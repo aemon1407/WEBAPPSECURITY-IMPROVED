@@ -5,7 +5,7 @@ d
 |Member                      |Matric ID| Assigned Tasks
 |----------------------------|---------|---------
 |Aiman Fathi Bin Mohd Fairuz |2121549  | Regex application, input validation, authentication of admin login, application of session and timeout, authorization for admin access, password hashing
-|Safwan bin Roslin           |2113779  |
+|Safwan bin Roslin           |2113779  | XSS Prevention and CSRF Prevention
 |Muhammad Haniff bin Ismail  |2110619  |
 
 ## Table of Content
@@ -39,14 +39,14 @@ Implemented input validation to prevent unwanted characters or format for every 
 - Ensure email & matric number uniqueness, where used email and matric number cannot be registered anymore. <br>
   Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L28-L49
 
-  
 <a id="authentication"></a>
 ### 2. Authentication
+
 <a id="authorization"></a>
 ### 3. Authorization
+
 <a id="XSS"></a>
 ### 4. XSS Prevention
-<a id="CSRFprevention"></a>
 - This code snippet demonstrates how to protect a web application from Cross-Site Scripting (XSS) attacks by sanitizing user input. XSS attacks occur when an attacker is able to inject malicious scripts into web pages viewed by other users. To prevent this, the code uses the htmlspecialchars function to convert special characters to their HTML entities, thus preventing the execution of any embedded scripts. <br><br>
 - Snippet from dashboard.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/fc7f60415b65f40fb5b9dfa5e4ac57190d18330b/admin/dashboard.php#L126-L129 <br>
   https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/fc7f60415b65f40fb5b9dfa5e4ac57190d18330b/admin/dashboard.php#L156-L160 <br>
@@ -57,12 +57,19 @@ Implemented input validation to prevent unwanted characters or format for every 
   `"` becomes `&quot;` <br>
   `'` becomes `&#039;` <br> <br>
 - By using htmlspecialchars, the script ensures that any HTML or JavaScript code submitted through the form will be displayed as plain text, rather than being executed by the browser. This prevents malicious scripts from running and potentially compromising the security of the website or its users. <br>
+
+<a id="CSRFprevention"></a>
 ### 5. CSRF Prevention
+- This code snippet is an example of a function designed to prevent Cross-Site Request Forgery (CSRF) attacks in a web application. CSRF attacks occur when a malicious actor tricks a user into performing actions on a web application without their knowledge or consent. This function helps ensure that any form submission or request comes from an authenticated and legitimate source. <br><br>
+- Snippet from dashboard.php : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/fc7f60415b65f40fb5b9dfa5e4ac57190d18330b/admin/dashboard.php#L26-L36 <br>
+- The csrf_check function ensures that any request to the server includes a valid CSRF token, thereby protecting the application from CSRF attacks. If the token is missing or invalid, the function responds with a 405 status code and an error message, and halts further execution. This helps maintain the security and integrity of user actions within the application. <br>
+
 <a id="databaseSecurity"></a>
 ### 6. Database Security Principles
 - Using prepared statement and parameter binding to ensure the user input treated as data. <br>
   Snippet from Registration.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/registration/Registration.php#L50-L61 <br>
   Snippet from login.php https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/admin/login.php#L25-L31
+
 <a id="fileSecurity"></a>
 ### 7. File Security Principles
 Create a .htaccess file to protect from unathourize file access.
@@ -70,5 +77,6 @@ Create a .htaccess file to protect from unathourize file access.
   Snippet from .htaccess file https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/.htaccess#L1-L3
 - Disabling .html extension from URL <br>
   Snippet from .htaccess file https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/875e27075e5a366fade9704739da60e7942eec24/.htaccess#L5-L21
+
 <a id="addSecurity"></a>
 ### 8. Additional Security Measure
