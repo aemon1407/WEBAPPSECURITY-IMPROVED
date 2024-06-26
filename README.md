@@ -33,10 +33,9 @@ The objective of this website enhancement is to significantly improve its securi
 <a id="inputValidation"></a>
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
-- Using Regex & htmlspecialchar, to ensure that only allowed characters can be entered as input. <br>
+- Using Regex to ensure that only allowed characters can be entered as input. <br>
   Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52 <br>
-  Snippets from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/a985fb1f61b453642db29ba740e3c23cedc946c7/registration/Registration.php#L21-L26 <br>
-- Ensure email & matric number uniqueness, where used email and matric number cannot be registered anymore. <br>
+  
   Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L28-L49
 
 <a id="authentication"></a>
