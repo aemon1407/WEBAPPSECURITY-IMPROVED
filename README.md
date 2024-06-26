@@ -34,16 +34,24 @@ The objective of this website enhancement is to significantly improve its securi
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
 - Using Regex & htmlspecialchar, to ensure that only allowed characters can be entered as input. <br>
-  Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52
-  Snippets from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L21C5-L27C1
+  Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52 <br>
+  Snippets from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/a985fb1f61b453642db29ba740e3c23cedc946c7/registration/Registration.php#L21-L26 <br>
 - Ensure email & matric number uniqueness, where used email and matric number cannot be registered anymore. <br>
   Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L28-L49
 
 <a id="authentication"></a>
 ### 2. Authentication
+Implement authentication for admin login to ensure safety when accessing user data.
+- Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing.
+  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/7355608.php#L20C5-L20C60
+- Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
+  Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
 
 <a id="authorization"></a>
 ### 3. Authorization
+Allow certain feature to be access by particular personnel only.
+- User: Only allow to register as member without login.
+- Admin: Can login to admin dashboard to do CRUD activities such as View, Add, Edit and Delete member's lists.
 
 <a id="XSS"></a>
 ### 4. XSS Prevention
