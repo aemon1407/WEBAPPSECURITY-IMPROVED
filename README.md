@@ -35,7 +35,8 @@ The objective of this website enhancement is to significantly improve its securi
 Implemented input validation to prevent unwanted characters or format for every user input.
 - Using Regex to ensure that only allowed characters can be entered as input. <br>
   Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52 <br>
-  
+
+- Ensure that email & matric number can only be registered once by user.
   Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L28-L49
 
 <a id="authentication"></a>
