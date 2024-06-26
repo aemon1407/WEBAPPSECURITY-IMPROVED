@@ -32,11 +32,11 @@ The objective of this website enhancement is to significantly improve its securi
 <a id="inputValidation"></a>
 ### 1. Input Validation
 Implemented input validation to prevent unwanted characters or format for every user input.
-- Using Regular Expression to ensure that only allowed characters can be entered as input. <br>
-  Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/371e923b7ca221b4309d8892e38da41039f2be1f/registration/Registration.js#L37-L52 <br>
+- Using Regular Expression for client side validation to ensure that only allowed characters can be entered as input.  <br>
+  Snippets from Registration.js : https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/4596e8297e9ee7a3161805f52bd3e3659d9959b4/registration/Registration.js#L37-L81 <br>
 
-- Ensure that email & matric number can only be registered once by user.
-  Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dc3f9b3a7e632b1befeac1cdb96b4ac00e9eaaae/registration/Registration.php#L28-L49
+- This is the server-side validation. This also ensures that email & matric number can only be registered once by user.
+  Snippet from Registration.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/4596e8297e9ee7a3161805f52bd3e3659d9959b4/registration/Registration.php#L18-L50 <br>
 
 <a id="authentication"></a>
 ### 2. Authentication
