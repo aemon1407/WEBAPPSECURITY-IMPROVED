@@ -42,10 +42,8 @@ Implemented input validation to prevent unwanted characters or format for every 
 <a id="authentication"></a>
 ### 2. Authentication
 Implement authentication for admin login to ensure safety when accessing user data.
-- Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing.
-  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/7355608.php#L20C5-L20C60
-- Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
-  Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
+- Admin does not need to sign up as the credentials are already put in the database system. Only requires login. Login password are hashed using default hashing. <br>
+  https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/7355608.php#L20C5-L20C60 <br>
 
 <a id="authorization"></a>
 ### 3. Authorization
@@ -88,3 +86,7 @@ Create a .htaccess file to protect from unathourize file access.
 
 <a id="addSecurity"></a>
 ### 8. Additional Security Measure
+
+- Session timeout implementation. Any inactivity after 10 minutes will be automatically logged out.
+  Snippets from dashboard.php: https://github.com/aemon1407/WEBAPPSECURITY-IMPROVED/blob/dd8307662aba1fe27f6828a5b51f9c61afd5125a/admin/dashboard.php#L7-L24
+
