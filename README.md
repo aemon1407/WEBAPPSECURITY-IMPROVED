@@ -1,8 +1,6 @@
 # WEBAPPSECURITY-IMPROVED
-# Final Assessment INFO 4345
+# Final Assessment INFO 4345 | RAZER
 
-# Group Name
-## Razer
 # Group Member
 |Member                      |Matric ID| Assigned Tasks
 |----------------------------|---------|---------
