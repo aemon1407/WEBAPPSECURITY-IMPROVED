@@ -12,7 +12,7 @@
 1. [Input Validation](#inputValidation)
 2. [Authentication](#authentication)
 3. [Authorization](#authorization)
-4. [CSS](#CSS)
+4. [XSS Prevention](#XSS)
 5. [CSRF Prevention](#CSRFprevention)
 6. [Database Security Principles](#databaseSecurity)
 7. [File Security Princliples](#fileSecurity)
@@ -27,6 +27,7 @@ PEMBINA IIUM
 ## Introduction
 
 ## Objective of the Enchancements
+The objective of this website enhancement is to significantly improve its security by implementing comprehensive measures. Input validation for ensuring proper data enters the system, authentication and authorization for verifying user identities and controlling access, XSS prevention for mitigating script injection attacks, CSRF prevention for protecting against unauthorized actions, database security principles for safeguarding data integrity, file security principles for ensuring secure file handling, and additional security measurements to address potential vulnerabilities and enhance overall protection. These enhancements will create a secure, reliable, and efficient platform for all users.
 
 ## Web Application Security Enhancements
 <a id="inputValidation"></a>
@@ -40,8 +41,8 @@ Implemented input validation to prevent unwanted characters or format for every 
 ### 2. Authentication
 <a id="authorization"></a>
 ### 3. Authorization
-<a id="CSS"></a>
-### 4. CSS
+<a id="XSS"></a>
+### 4. XSS Prevention
 <a id="CSRFprevention"></a>
 ### 5. CSRF Prevention
 <a id="databaseSecurity"></a>
